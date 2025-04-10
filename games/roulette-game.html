@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Roulette</title>
+  <link rel="stylesheet" href="../css/roulette.css">
+</head>
+<body>
+  <h1>🎰 Roulette Game</h1>
+
+  <div class="info">
+    <div>💰 Coins: <span id="coins">10000</span></div>
+    <div id="status"></div>
+  </div>
+
+  <div id="board" class="board"></div>
+
+  <div class="controls">
+    <div class="chips">
+      <button onclick="selectChip(10)">💵 10</button>
+      <button onclick="selectChip(50)">💵 50</button>
+      <button onclick="selectChip(100)">💵 100</button>
+    </div>
+
+    <div class="actions">
+      <button onclick="betEvenOdd('even')">Even</button>
+      <button onclick="betEvenOdd('odd')">Odd</button>
+      <button onclick="spinWheel()">🎡 Spin</button>
+      <button onclick="rebet()">♻️ Rebet</button>
+    </div>
+  </div>
+
+  <div id="ball" class="ball"></div>
+
+  <h3>📜 Win/Loss History:</h3>
+  <div id="history" class="history"></div>
+  <audio id="chipSound" src="/sounds/chipdrop.mp3" preload="auto"></audio>
+  <script src="../js/roulette.js"></script>
+</body>
+</html>

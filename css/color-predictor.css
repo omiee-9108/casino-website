@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(circle, #0f0f0f, #000);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .color-game-container {
+    background: #111;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #00ffcc44;
+    width: 360px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #ffd700;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #ffd700;
+  }
+  
+  .coin-display {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    background: #222;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px #00ffccaa;
+  }
+  
+  .controls label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .buttons {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .color-btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+  }
+  
+  .color-btn.red { background: #e53935; }
+  .color-btn.green { background: #43a047; }
+  .color-btn.black { background: #212121; }
+  
+  .color-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  input {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: #222;
+    color: #fff;
+    box-shadow: 0 0 5px #888;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #ffd700, #ffb300);
+    color: #000;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ffd70088;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffd700bb;
+  }
+  
+  .spinner {
+    margin: 30px auto 10px;
+    width: 80px;
+    height: 80px;
+    border: 10px solid transparent;
+    border-top: 10px solid #ff1744;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    display: none;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }
+  
+  .result-msg {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    min-height: 40px;
+  }
+  
+  .coin-shower {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 999;
+  }
+  
+  .coin {
+    position: absolute;
+    width: 30px; height: 30px;
+    background: url('images/coin.png') center/cover no-repeat;
+    animation: fall 3s linear, spin 2s infinite;
+    opacity: 0.9;
+  }
+  
+  @keyframes fall {
+    0% { transform: translateY(-100px) rotate(0); opacity: 0; }
+    10% { opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+  }
+  
+  @keyframes spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+  }
+  

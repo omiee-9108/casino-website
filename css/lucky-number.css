@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle, #1a1a1a, #000);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background: rgba(20, 20, 20, 0.9);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #ffd70066;
+  width: 350px;
+  position: relative;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffd700;
+  animation: pulseText 2s infinite;
+}
+
+@keyframes pulseText {
+  0%, 100% { text-shadow: 0 0 10px #ffd700; }
+  50% { text-shadow: 0 0 20px #ffeb3b; }
+}
+
+.coin-display {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #00ffcc;
+  background: #111;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #00ffccaa;
+  display: inline-block;
+}
+
+.game-box {
+  margin-top: 30px;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 10px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 0 5px #ffeb3b;
+  transition: 0.3s;
+}
+
+input:focus {
+  box-shadow: 0 0 15px #ffeb3b;
+}
+
+button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #ffd700, #ffb300);
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 213, 0, 0.6);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 217, 0, 0.9);
+}
+
+.result {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  min-height: 60px;
+  color: #ffffff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+/* Coin Shower Animation */
+.coin-shower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.coin {
+  position: absolute;
+  top: -50px;
+  width: 40px;
+  height: 40px;
+  background: url('images/coin.png') center/contain no-repeat;
+  animation: fall 3s linear, spin 2s infinite;
+  opacity: 0.9;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes spin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+/* Past Results Table */
+.past-results {
+  margin-top: 40px;
+  text-align: left;
+  max-height: 200px;
+  overflow-y: auto;
+  background: #111;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #444;
+}
+
+.past-results h2 {
+  color: #ffd700;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #eee;
+}
+
+th, td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #333;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+td.win {
+  color: #00ff90;
+  text-shadow: 0 0 5px #00ff90;
+}
+
+td.lose {
+  color: #ff6b6b;
+  text-shadow: 0 0 5px #ff6b6b;
+}
+
+  

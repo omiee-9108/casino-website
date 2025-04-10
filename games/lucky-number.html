@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lucky Number</title>
+  <link rel="stylesheet" href="../css/lucky-number.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🎯 Lucky Number</h1>
+      <div class="coin-display">Coins: <span id="coins">1000</span></div>
+    </div>
+
+    <div class="game-box">
+      <label for="guess">Pick a number (1–10):</label>
+      <input type="number" id="guess" min="1" max="10" />
+
+      <label for="bet">Enter your bet:</label>
+      <input type="number" id="bet" min="1" />
+
+      <button onclick="playGame()">🎰 Try Your Luck!</button>
+    </div>
+
+    <div class="result" id="resultMsg"></div>
+
+    <div class="past-results">
+      <h2>🎲 Past Results</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Your Pick</th>
+            <th>Drawn</th>
+            <th>Result</th>
+            <th>Coins</th>
+          </tr>
+        </thead>
+        <tbody id="resultsTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Coin shower animation container -->
+  <div class="coin-shower" id="coinShower"></div>
+
+  <script src="../js/lucky-number.js"></script>
+</body>
+</html>

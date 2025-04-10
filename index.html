@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Casino Games Website</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- HEADER SECTION -->
+  <section id="header">
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <img src="images/logo.jpg" alt="Logo" />
+      </a>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#Contract">Contact</a></li>
+      </ul>
+      <div class="coin-display">
+        🪙 Coins: <span id="coinBalance">10000</span>
+      </div>
+    </nav>
+    
+
+    <div class="header-heading">
+      <h1>$3000 + 150 FREE SPINS</h1>
+      <h2>GOLDEN WELCOME</h2>
+      <a class="btn" href="#">Play Games</a>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="about-img">
+      <img src="images/about.png" alt="About"/>
+    </div>
+    <div class="about-text">
+      <h1>About Us</h1>
+      <p>BIGGEST GAMING WEBSITE.</p>
+      <h3>Software</h3>
+      <p>OMIEE GAMMING.</p>
+      <h3>Security</h3>
+      <p>NEXT LEVEL SECURITY WHICH YOU CANT THINK OF.</p>
+      <a class="btn" href="#">Read More</a>
+    </div>
+  </section>
+
+  <!-- GAMES SECTION -->
+  <section id="games">
+    <div class="game-heading">
+      <h1>New Games</h1>
+      <p>PLAY THIS GAMES TO WIN.</p>
+    </div>
+    <section id="games">
+        <div class="game-heading">
+          <h1>New Games</h1>
+          <p>COMMING SOON...</p>
+          
+          <section id="tournaments">
+            <div class="tournament-heading">
+              <h1>🏆 Weekly Tournament</h1>
+              <p>Compete to win real rewards every week!</p>
+            </div>
+          
+            <div class="leaderboard">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Points</th>
+                  </tr>
+                </thead>
+                <tbody id="leaderboard-data">
+                  <!-- JS will populate this -->
+                </tbody>
+              </table>
+            </div>
+          </section>
+          
+          
+          <!-- 🔍 Search Input -->
+          <input
+            type="text"
+            id="gameSearch"
+            placeholder="Search Games..."
+            class="search-input"
+          />
+        </div>
+      
+        <div class="game-container" id="gameContainer">
+          <!-- Game cards go here (already in your code) -->
+        </div>
+      </section>
+      
+    <div class="game-container">
+      <!-- Repeat this block for each game -->
+      <div class="game-box">
+        <div class="game-img">
+          <img src="images/lucky-number-game.jpg" alt="Game 1"/>
+        </div>
+        <div class="game-play">
+          <h4>lucky-number</h4>
+          <a href="games/lucky-number.html" class="btn">Play</a>
+        </div>
+      </div>
+
+      <div class="game-box">
+        <div class="game-img">
+          <img src="images/High-low-game.jpg" alt="Game 2"/>
+        </div>
+        <div class="game-play">
+          <h4>Highlow Game</h4>
+          <a href="games/highlow.html" class="btn">Play</a>
+        </div>
+      </div>
+
+      <div class="game-box">
+        <div class="game-img">
+          <img src="images/game-3.jpg" alt="Game 3"/>
+        </div>
+        <div class="game-play">
+          <h4>Color-predictor Game</h4>
+          <a href="games/color-predictor.html" class="btn">Play</a>
+        </div>
+      </div>
+
+      <div class="game-box">
+        <div class="game-img">
+          <img src="images/plinko.jpg" alt="Game 3"/>
+        </div>
+        <div class="game-play">
+          <h4>Plinko Game</h4>
+          <a href="games/plinko.html" class="btn">Play</a>
+        </div>
+      </div>
+
+      <div class="game-box">
+        <div class="game-img">
+          <img src="images/simple-slot-game.jpg" alt="Game 3"/>
+        </div>
+        <div class="game-play">
+          <h4>Simple slot game</h4>
+          <a href="games/simple-slot-game.html" class="btn">Play</a>
+        </div>
+      </div>
+
+      <div class="game-box">
+        <div class="game-img">
+          <img src="images/wheel-multiplier.jpg" alt="Game 3"/>
+        </div>
+        <div class="game-play">
+          <h4>Wheel Multiplier</h4>
+          <a href="games/wheel-multiplier.html" class="btn">Play</a>
+        </div>
+      </div>
+
+      <div class="game-box">
+        <div class="game-img">
+          <img src="images/roulette.jpg" alt="Game 3"/>
+        </div>
+        <div class="game-play">
+          <h4>Roulette</h4>
+          <a href="games/roulette-game.html" class="btn">Play</a>
+        </div>
+      </div>
+      <!-- Add more as needed -->
+    </div>
+  </section>
+
+    <!-- CONTACT SECTION -->
+
+  <section id="contact">
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      <p>Have questions? Get in touch with us.</p>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" name="name" required />
+        <input type="email" placeholder="Your Email" name="email" required />
+        <textarea placeholder="Your Message" name="message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <p id="formMessage" class="form-message"></p>
+    </div>
+  </section>
+  
+  <section id="profile-card">
+    <h2 class="game-heading">👤 Your Profile</h2>
+    <div class="profile-container">
+      <div class="profile-avatar">
+        <img src="images/default-avatar.jpg" alt="Avatar" id="avatar-preview">
+        <input type="file" id="avatar-upload" accept="image/*">
+      </div>
+      <div class="profile-info">
+        <h3 id="username">OMIEE</h3>
+        <p>Level: <span id="level">12</span></p>
+        <p>Wins: <span id="wins">48</span> | Losses: <span id="losses">8</span></p>
+        <a href="#" class="btn">Edit Profile</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
+  <footer id="contact">
+    <p>© Copyright Omiee</p>
+  </footer>
+  <!--Baground Music-->
+  <audio id="bgmusic" src="/sounds/websitebaground.mp3" preload="auto"></audio>
+  <button id="musicToggle" onclick="toggleMusic()">🔊</button>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

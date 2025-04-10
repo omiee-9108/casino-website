@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎯 Plinko Game</title>
+  <link rel="stylesheet" href="../css/plinko.css" />
+</head>
+<body>
+  <div class="plinko-container">
+    <h1>🎯 Plinko</h1>
+    <div class="coin-display">Coins: <span id="coins">1000</span></div>
+
+    <div class="controls">
+      <label>Enter your bet:</label>
+      <input type="number" id="betAmount" placeholder="Enter Bet" min="1" />
+      <button onclick="dropBall()">Drop Ball</button>
+    </div>
+
+    <div class="board" id="plinkoBoard"></div>
+    <div class="slots" id="slotsContainer"></div>
+
+    <div class="result-msg" id="resultMsg"></div>
+    <div class="coin-shower"></div>
+  </div>
+
+  <script src="../js/plinko.js"></script>
+</body>
+</html>

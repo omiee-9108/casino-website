@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Slot Game</title>
+  <link rel="stylesheet" href="../css/simple-slot-game.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="images/logo.jpg" alt="Logo"/>
+    </a>
+    <div class="coin-display">🪙 Coins: <span id="coinBalance">0</span></div>
+  </nav>
+
+  <section id="slot-game" style="text-align: center; margin-top: 100px;">
+    <h1>🎰 Simple Slot Machine</h1>
+    <div id="slot" style="font-size: 3rem; margin: 30px;">🍒 🍋 🍊</div>
+    <button id="spinBtn" class="btn">Spin (Cost: 100)</button>
+    <p id="resultMsg"></p>
+  </section>
+
+  <script src="../js/simple-slot-game.js"></script>
+</body>
+</html>

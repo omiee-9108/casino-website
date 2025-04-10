@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kiwi Maru', sans-serif;
+}
+
+body {
+  background-color: #111;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 20px 5%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #e9c966;
+}
+
+.logo img {
+    height: 70px; /* adjust based on your logo size */
+    margin-left: -50px; /* tweak if positioning is off */
+  }
+  
+
+/* Header Section */
+#header {
+  width: 100%;
+  height: 100vh;
+  background: url('images/bg1.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  position: relative;
+}
+
+.header-heading {
+  text-align: center;
+  color: #fff;
+}
+
+.header-heading h1 {
+  font-size: 3rem;
+  color: #e9c966;
+  letter-spacing: 2px;
+}
+
+.header-heading h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #e9c966;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #d1af52;
+}
+
+/* About Section */
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 5%;
+  background-color: #000;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.about-img img {
+  width: 400px;
+  max-width: 100%;
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.about-text h1 {
+  color: #e9c966;
+  border-bottom: 2px solid #e9c966;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.about-text h3 {
+  color: #e9c966;
+  margin-top: 15px;
+}
+
+/* Games Section */
+#games {
+  background-color: #1e1e1e;
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.game-heading h1 {
+  color: #e9c966;
+  margin-bottom: 10px;
+}
+
+.game-heading p {
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.game-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.game-box {
+  background-color: #fff;
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 4px 10px 12px rgba(255, 217, 0, 0.908);
+}
+
+.game-img img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.game-play {
+  padding: 15px;
+  text-align: center;
+}
+
+.game-play h4 {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  color: white;
+}
+/* Active link highlight */
+nav ul li a.active {
+    border-left: 2px solid #e9c966;
+    border-bottom: 2px solid #e9c966;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #e9c966;
+    color: black;
+    font-size: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top.show {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/************Search Bar************/
+.search-input {
+    width: 300px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin: 20px auto;
+    display: block;
+    font-size: 16px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/************Contact Section************/
+#contact {
+    width: 100%;
+    padding: 60px 20px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  #contact h1 {
+    font-size: 2rem;
+    color: #e9c966;
+    margin-bottom: 10px;
+  }
+  
+  #contact p {
+    color: #ddd;
+    margin-bottom: 30px;
+  }
+  
+  #contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  #contact input,
+  #contact textarea {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    resize: none;
+  }
+  
+  #contact textarea {
+    height: 120px;
+  }
+  
+  .form-message {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #e9c966;
+  }
+  /* Send Animation */
+.sending {
+  background-color: #e9c966;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 217, 0, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 10px rgba(255, 217, 0, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 217, 0, 0);
+  }
+}
+
+/* Message Fade In */
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/************Leaderboard Section************/
+#tournaments {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 5%;
+    text-align: center;
+  }
+  
+  .tournament-heading h1 {
+    color: #e9c966;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .tournament-heading p {
+    color: #ccc;
+    font-size: 1rem;
+  }
+  
+  .leaderboard {
+    margin-top: 30px;
+    overflow-x: auto;
+  }
+  
+  .leaderboard table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 10px rgba(255, 217, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .leaderboard th,
+  .leaderboard td {
+    padding: 15px;
+    border-bottom: 1px solid #333;
+  }
+  
+  .leaderboard th {
+    background-color: #e9c966;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .leaderboard tr:nth-child(even) {
+    background-color: #2a2a2a;
+  }
+
+/************Profile Section************/
+  #profile-card {
+    padding: 60px 5%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+  }
+  
+  .profile-avatar {
+    position: relative;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .profile-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid #e9c966;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(255, 217, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-avatar:hover img {
+    transform: scale(1.05);
+  }
+  
+  #avatar-upload {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.9;
+    cursor: pointer;
+    font-size: 10px;
+    background: #e9c966;
+    padding: 4px 6px;
+    border-radius: 6px;
+  }
+  
+  .profile-info h3 {
+    font-size: 1.6rem;
+    color: #e9c966;
+  }
+  
+  .profile-info p {
+    margin: 8px 0;
+    font-size: 1.7rem;
+  }
+  /***************COIN BALANCE SECTION***************/
+  .coin-display {
+    color: #e9c966;
+    font-weight: bold;
+    margin-left: auto;
+    padding-right: 20px;
+    font-size: 1rem;
+  }
+  /***************music on and off***************/
+  .music-icon {
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    animation: pulseGlow 2s infinite;
+    transition: transform 0.2s ease;
+  }
+  
+  .music-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  @keyframes pulseGlow {
+    0% {
+      text-shadow: 0 0 5px #f0f, 0 0 10px #f0f, 0 0 20px #f0f;
+    }
+    50% {
+      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+    }
+    100% {
+      text-shadow: 0 0 5px #f0f, 0 0 10px #f0f, 0 0 20px #f0f;
+    }
+  }
+  

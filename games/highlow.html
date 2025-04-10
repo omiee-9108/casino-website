@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>High or Low</title>
+  <link rel="stylesheet" href="../css/highlow.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/logo.jpg" alt="Logo" />
+    </div>
+    <div class="coin-display">
+      Coins: <span id="coinBalance">1000</span>
+    </div>
+  </nav>
+
+  <section id="game-container">
+    <h1>High or Low?</h1>
+    
+    <!-- CARD FLIP CONTAINER -->
+    <div class="card-display">
+      <div class="card-container" id="cardContainer">
+        <div class="card-inner" id="cardInner">
+          <div class="card-front">?</div>
+          <div class="card-back" id="cardValue">7</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GUESS BUTTONS -->
+    <div class="guess-buttons">
+      <button class="btn" onclick="guess('higher')">Higher</button>
+      <button class="btn" onclick="guess('lower')">Lower</button>
+    </div>
+
+    <!-- RESULT MESSAGE -->
+    <div id="resultMsg"></div>
+
+    <!-- NEXT CARD BUTTON -->
+    <div class="next-btn-container">
+      <button id="nextCardBtn" class="btn" onclick="nextCard()">Next Card</button>
+    </div>
+  </section>
+
+  <!-- COIN RAIN EFFECT -->
+  <div class="coin-rain" id="coinRain"></div>
+
+  <!-- SCRIPT -->
+  <script src="../js/highlow.js"></script>
+</body>
+</html>
+<!-- Inside your .card-back -->
+<div class="card-back" id="cardValue">?</div>
+

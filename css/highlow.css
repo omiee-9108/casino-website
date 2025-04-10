@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle, #1a1a1a, #000);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a0a0a;
+  padding: 20px 40px;
+  box-shadow: 0 0 20px rgba(255, 217, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.coin-display {
+  background: #222;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #ffd700;
+  font-size: 1.2rem;
+  color: #ffd700;
+}
+
+#game-container {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#game-container h1 {
+  font-size: 3rem;
+  color: #e9c966;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #ffd700;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { text-shadow: 0 0 10px #ffd700; }
+  50% { text-shadow: 0 0 30px #ffd700; }
+  100% { text-shadow: 0 0 10px #ffd700; }
+}
+
+.card-display {
+  margin: 40px 0;
+}
+
+.card-container {
+  perspective: 1000px;
+  display: inline-block;
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 10px #ffd700; }
+  100% { box-shadow: 0 0 30px #ffd700; }
+}
+
+.card-inner {
+  width: 180px;
+  height: 250px;
+  transition: transform 0.8s ease-in-out;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card-container.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  box-shadow: 0 0 15px #ffd700;
+}
+
+.card-front {
+  background-color: #fff;
+  color: #111;
+}
+
+.card-back {
+  background-color: #e9c966;
+  color: #000;
+  transform: rotateY(180deg);
+}
+
+.guess-buttons {
+  margin: 30px 0;
+}
+
+.btn {
+  background-color: #e9c966;
+  color: #000;
+  padding: 15px 35px;
+  margin: 15px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 217, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 217, 0, 0.8);
+}
+
+#resultMsg {
+  font-size: 1.5rem;
+  margin: 20px;
+  color: #ffeb3b;
+  text-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
+}
+
+.next-btn-container {
+  margin-top: 30px;
+}
+
+/************** Coin Rain **************/
+.coin-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;  /* <- fixed from 0 */
+  pointer-events: none;
+  z-index: 999;
+  overflow: visible;
+}
+
+.coin {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url('images/coin.png') no-repeat center;
+  background-size: cover;
+  animation: fall 3s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-100px) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+  

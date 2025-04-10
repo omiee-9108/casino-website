@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wheel of Multipliers</title>
+  <link rel="stylesheet" href="../css/wheel-multiplier.css" />
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">🎡 CHILLI BET</div>
+    <div class="coin-display">Coins: <span id="coinBalance">1000</span></div>
+  </div>
+
+  <div class="wheel-container">
+    <div class="pointer"></div>
+    <div class="wheel" id="wheel"></div>
+  </div>
+
+  <div class="controls">
+    <input type="number" id="betAmount" min="1" value="100" />
+    <button onclick="placeBet()">Place Bet</button>
+    <button onclick="spinWheel()">🎰 Spin</button>
+    <div id="result" class="result"></div>
+  </div>
+
+
+
+  <script src="../js/wheel-multiplier.js"></script>
+</body>
+</html>
